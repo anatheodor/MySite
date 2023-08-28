@@ -115,7 +115,7 @@ h2, h3, .text-mono {
 h1 {
 	margin-block-start: 0;
 	color: var(--blue);
-	padding-block-start: 1em;
+	padding-block-start: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: var(--step-5);
