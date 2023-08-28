@@ -53,12 +53,12 @@ body {
 }
 
 h1, h2, h3 {
-	font-weight: 800;
+	font-weight: 700;
 }
 
 
 h1, h2, h3, .text-mono {
-	font-family: 'Chivo Mono', monospace;
+	font-family: 'Chivo Mono', "Courier New", monospace;
 }
 
 
@@ -80,7 +80,6 @@ h2 {
 
 h3 {
 	font-size: 2.7em;
-	font-weight: 200;
 	margin: 1.4em 0 0.5em 0;
 	padding: 0;
 }
@@ -168,37 +167,47 @@ footer {
 #page-tagline {
 	background: var(--black);
 	color: var(--white);
-	font-size: calc(var(--tagline-character-size) * 1ch);
+	font-size: calc(var(--tagline-character-size) * 1vw);
 	padding-block: 1em;
 	font-weight: 100;
 	inset-block-end: 0;
 	inset-inline: 0;
 	z-index: 1;
-	--tagline-character-size: 15;
+	--tagline-characters: 110;
+	--tagline-character-size: 6;
 }
 
 @media (max-width: 47rem) {
 	#page-tagline {
-		--tagline-character-size: 7.5;
+		--tagline-characters: 400;
+		--tagline-character-size: 20;
 	}
 }
 
 .marquee {
     position: relative;
     overflow: hidden;
-	--speed-multiplier: 0.7;
-	--tagline-characters-per-view: calc(100vw / (var(--tagline-characters) * 1ch));
-    --speed: calc(var(--tagline-characters) * var(--speed-multiplier) * 1s);
+	--speed-multiplier: 0.3;
+    --speed: calc(var(--tagline-characters) * var(--speed-multiplier) * 1s );
+}
+
+@media (max-width: 47rem) {
+	.marquee {
+		position: relative;
+		overflow: hidden;
+		--speed-multiplier: 0.05;
+		--speed: calc(var(--tagline-characters) * var(--speed-multiplier) * 1s);
+	}
 }
 
 .marquee span {   
     display: inline-block;
     white-space: nowrap;
-    width: calc(var(--tagline-characters) * 1ch);
-    text-shadow: calc(var(--tagline-characters) * 1ch) 0 currentColor, 
-                 calc(var(--tagline-characters) * 2ch) 0 currentColor, 
-                 calc(var(--tagline-characters) * 3ch) 0 currentColor,
-                 calc(var(--tagline-characters) * 4ch) 0 currentColor;
+    width: calc(var(--tagline-characters) * 1vw);
+    text-shadow: calc(var(--tagline-characters) * 1vw) 0 currentColor, 
+                 calc(var(--tagline-characters) * 2vw) 0 currentColor, 
+                 calc(var(--tagline-characters) * 3vw) 0 currentColor,
+                 calc(var(--tagline-characters) * 4vw) 0 currentColor;
    
     will-change: transform;
     animation: marquee var(--speed) linear infinite;
@@ -214,5 +223,4 @@ footer {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
-
 
