@@ -1,3 +1,47 @@
+/* inter-regular - greek_latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/inter-v12-greek_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - greek_latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/inter-v12-greek_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-100 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Chivo Mono';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/chivo-mono-v9-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Chivo Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/chivo-mono-v9-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Chivo Mono';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/chivo-mono-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 :root {
 	--black: black;
@@ -75,7 +119,6 @@ h1 {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: var(--step-5);
-	opacity: 0.85;
 	line-height: 1.1em;
 	font-weight: 600;
 }
@@ -107,6 +150,27 @@ a img {
 }
 
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.profile-pic {
+	margin: 0;
+	padding:0;
+	margin-block-start: clamp(-5rem, -5vw, -3rem);
+	max-width: min(100%, 20rem);
+	position: relative;
+	z-index: 2;
+	border: 0.75rem solid var(--blue);
+}
+
+.profile-pic img {
+	width: 100%;
+}
+
+
 
 blockquote {
 	position: relative;
@@ -114,7 +178,6 @@ blockquote {
 	padding: 0;
 	font-size: var(--step-2);
 	line-height: 1.5em;
-	opacity: 0.9;
 }
 
 blockquote .quote {
@@ -148,6 +211,12 @@ ul.links {
 	margin: 0;
 }
 
+.links a {
+	display: inline-block;
+	padding-block: max(0.3em, 0.4rem);
+
+}
+
 
 ul li a {
 	display: inline-block;
@@ -163,9 +232,6 @@ ul li a img {
 	top: 2px;
 }
 
-ul li a:hover img {
-	opacity: 0.8;
-}
 
 footer {
 	margin-block: calc(var(--grid-gutter) * 2);
