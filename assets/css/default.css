@@ -1,0 +1,305 @@
+/* inter-regular - greek_latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/inter-v12-greek_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - greek_latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/inter-v12-greek_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-100 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Chivo Mono';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/chivo-mono-v9-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Chivo Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/chivo-mono-v9-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Chivo Mono';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/chivo-mono-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+	--black: black;
+	--white: white;
+	--blue: #002def;
+	--blue-light: #002def;
+
+	--step--2: clamp(0.70rem, calc(0.82rem + -0.15vw), 0.79rem);
+	--step--1: clamp(0.89rem, calc(0.87rem + 0.08vw), 0.94rem);
+	--step-0: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
+	--step-1: clamp(1.13rem, calc(0.94rem + 0.94vw), 1.67rem);
+	--step-2: clamp(1.27rem, calc(0.93rem + 1.66vw), 2.22rem);
+	--step-3: clamp(1.42rem, calc(0.89rem + 2.67vw), 2.96rem);
+	--step-4: clamp(1.60rem, calc(0.79rem + 4.08vw), 3.95rem);
+	--step-5: clamp(1.80rem, calc(0.60rem + 6.02vw), 5.26rem);
+
+	--grid-max-width: 77.50rem;
+	--grid-gutter: var(--space-s-l, clamp(1.00rem, calc(0.48rem + 2.61vw), 2.50rem));
+	--grid-columns: 12;
+
+}
+
+body {
+	padding: 0;
+	background-color: var(--blue);
+	border-bottom: var(--step-1) solid var(--blue);
+	margin: 0;
+	font-family: "Inter", Helvetica, Verdana, sans-serif;
+	color: var(--black);
+	text-shadow: 0 1px 0 #fff;
+	font-size: var(--step-0);
+}
+
+::selection {
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+#page-content {
+	background-color: var(--white);
+	padding-block-end: var(--step-2);
+	position: relative;
+	z-index: 2;
+}
+
+
+#main-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 1rem;
+}
+
+
+
+.contain {
+	max-width: var(--grid-max-width);
+	padding-inline: var(--grid-gutter);
+	margin-inline: auto;
+}
+
+h1, h2, h3 {
+	font-weight: 700;
+}
+
+
+h2, h3, .text-mono {
+	font-family: 'Chivo Mono', "Courier New", monospace;
+}
+
+
+h1 {
+	margin-block-start: 0;
+	color: var(--blue);
+	padding-block-start: 0.75em;
+	margin-block-end: 0.5em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: var(--step-5);
+	line-height: 1.1em;
+	font-weight: 600;
+}
+
+h2 {
+	margin-block-end: 0.25em;
+	font-size: var(--step-2);
+}
+
+h3 {
+	font-size: 2.7em;
+	margin: 1.4em 0 0.5em 0;
+	padding: 0;
+}
+
+a {
+	color: var(--black);
+	text-decoration-color: var(--blue);
+	text-decoration-thickness: 0.1em;
+	text-decoration-style: dotted;
+}
+
+a:hover {
+	color: var(--blue);
+}
+
+a img {
+	border-width: 0;
+}
+
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.profile-pic {
+	margin: 0;
+	padding:0;
+	margin-block-start: clamp(-5rem, -5vw, -3rem);
+	max-width: min(100%, 20rem);
+	position: relative;
+	z-index: 2;
+	border: 0.75rem solid var(--blue);
+}
+
+.profile-pic img {
+	width: 100%;
+}
+
+
+
+blockquote {
+	position: relative;
+	margin: 1.5em 0;
+	margin-block-start: 0;
+	padding: 0;
+	font-size: var(--step-2);
+	line-height: 1.5em;
+}
+
+blockquote .quote {
+	position: absolute;
+	top: -0.25em;
+	left: -0.25em;
+	width: 1em;
+	text-align: left;
+	color: rgba(47, 54, 63, 0.2);
+	font-family: arial, sans-serif;
+	font-size: 14em;
+	line-height: 1em;
+	text-shadow: none;
+}
+
+blockquote p {
+	position: relative;
+	margin: 0.5em 0;
+}
+
+blockquote .by {
+	text-align: right;
+	font-style: normal;
+}
+
+ul.links {
+	display: block;
+	padding-left: 0;
+	list-style: none;
+	line-height: 1.4em;
+	margin: 0;
+}
+
+.links a {
+	display: inline-block;
+	padding-block: max(0.3em, 0.4rem);
+
+}
+
+
+ul li a {
+	display: inline-block;
+	font-family: monospace;
+}
+
+ul li a strong {
+	margin-left: 1px;
+}
+
+ul li a img {
+	position: relative;
+	top: 2px;
+}
+
+
+footer {
+	margin-block: calc(var(--grid-gutter) * 2);
+	border-top: 0.1rem dotted var(--black);
+}
+
+#page-tagline {
+	background: var(--black);
+	color: var(--white);
+	font-size: calc(var(--tagline-character-size) * 1vw);
+	padding-block: 1em;
+	min-height: 20vh;
+	display: flex;
+	align-items: center;
+	font-weight: 100;
+	inset-block-end: 0;
+	inset-inline: 0;
+	z-index: 1;
+	--tagline-characters: 110;
+	--tagline-character-size: 6;
+}
+
+@media (max-width: 47rem) {
+	#page-tagline {
+		--tagline-characters: 400;
+		--tagline-character-size: 20;
+	}
+}
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+	--speed-multiplier: 0.3;
+    --speed: calc(var(--tagline-characters) * var(--speed-multiplier) * 1s );
+}
+
+@media (max-width: 47rem) {
+	.marquee {
+		position: relative;
+		overflow: hidden;
+		--speed-multiplier: 0.05;
+		--speed: calc(var(--tagline-characters) * var(--speed-multiplier) * 1s);
+	}
+}
+
+.marquee span {   
+    display: inline-block;
+    white-space: nowrap;
+    width: calc(var(--tagline-characters) * 1vw);
+    text-shadow: calc(var(--tagline-characters) * 1vw) 0 currentColor, 
+                 calc(var(--tagline-characters) * 2vw) 0 currentColor, 
+                 calc(var(--tagline-characters) * 3vw) 0 currentColor,
+                 calc(var(--tagline-characters) * 4vw) 0 currentColor;
+   
+    will-change: transform;
+    animation: marquee var(--speed) linear infinite;
+}
+
+@media (@prefers-reduced-motion: reduce) {
+	.marquee span {
+		animation: none;
+	}
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--tagline-characters) * 1vw)); }
+}
+
