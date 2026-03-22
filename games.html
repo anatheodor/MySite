@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- It is a love letter to the earlier iterations of the internet, including the Geocities era, the web art age, and the romantic html era. The website is responsive for desktop and mobile. -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Games | Anastasios Theodoropoulos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#0000ff">
+	<meta name="description" content="Games designed and developed by Anastasios Theodoropoulos">
+	
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Games | Anastasios Theodoropoulos">
+	<meta property="og:description" content="A collection of games I have designed and developed.">
+	<meta property="og:type" content="website">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/default.css">
+	<style>
+		/* Override taglines for inner pages if needed */
+		.inner-header {
+			padding-top: var(--step-2);
+			padding-bottom: var(--step-2);
+		}
+		.game-card {
+			margin-bottom: var(--step-4);
+		}
+		.game-screenshot {
+			width: 100%;
+			height: auto;
+			border-top: var(--border-width) solid var(--black);
+			border-bottom: var(--border-width) solid var(--black);
+			margin: var(--step-2) 0;
+			display: block;
+			filter: contrast(1.1) grayscale(0.1); 
+		}
+	</style>
+</head>
+<body>
+	<div id="page-content">
+		<header>
+			<!-- Back to Home banner -->
+			<div class="marquee text-mono brutal-marquee" style="background: var(--magenta);">
+				<span><a href="index.html" style="background: transparent; border: none; box-shadow: none; color: inherit; padding: 0;">&larr; BACK TO HOME PAGE</a> 🎮 GAMES 🎮 <a href="index.html" style="background: transparent; border: none; box-shadow: none; color: inherit; padding: 0;">&larr; BACK TO HOME PAGE</a> 🎮 GAMES 🎮 <a href="index.html" style="background: transparent; border: none; box-shadow: none; color: inherit; padding: 0;">&larr; BACK TO HOME PAGE</a> 🎮 GAMES 🎮 </span>
+			</div>
+			
+			<div class="contain inner-header">
+				<h1>My<br>Games</h1>
+				<p class="text-mono" style="font-weight: 700; font-size: var(--step-1);">A collection of digital games and interactive experiences I have designed and developed.</p>
+			</div>
+		</header>
+		
+		<main class="contain">
+			<!-- Game 1 Example -->
+			<section class="brutal-box game-card">
+				<h2>Godot Kart Racing Project</h2>
+				<p class="text-mono"><strong>Genre:</strong> Racing / 3D<br><strong>Engine:</strong> Godot Engine<br><strong>Role:</strong> Designer & Developer</p>
+				
+				<!-- Placeholder for game screenshot -->
+				<!-- <img class="game-screenshot" src="assets/img/kart-screenshot.jpg" alt="Kart Game Screenshot"> -->
+				<div class="game-screenshot" style="background: var(--black); min-height: 200px; display: flex; align-items: center; justify-content: center;">
+					<span style="color: var(--white); font-family: 'Chivo Mono', monospace; font-size: 1.5rem;">[SCREENSHOT PLACEHOLDER]</span>
+				</div>
+
+				<p style="font-family: 'Chivo Mono', monospace; line-height: 1.5;">This is a 3D kart racing game featuring multiple levels (Pista 1, Pista 2, Pista 3), coin collection mechanics, and dynamic level transitions.</p>
+				
+				<ul class="links" style="margin-top: 1.5rem;">
+					<li><a href="#" target="_blank" title="Play Game">🕹️ PLAY ALFA</a></li>
+					<li><a href="#" target="_blank" title="View Source">📂 GITHUB REPO</a></li>
+				</ul>
+			</section>
+
+			<!-- Game 2 Example -->
+			<section class="brutal-box game-card" style="background: var(--magenta);">
+				<h2 style="color: var(--white); -webkit-text-stroke: 1px var(--black);">Possession Mode Prototype</h2>
+				<p class="text-mono" style="color: var(--white); -webkit-text-stroke: 0.5px var(--black);"><strong>Genre:</strong> Action / RPG<br><strong>Role:</strong> Core Mechanics</p>
+				
+				<p style="font-family: 'Chivo Mono', monospace; line-height: 1.5; color: var(--white); -webkit-text-stroke: 0.5px var(--black);">An experiment with AI overrides where the player can "possess" NPCs, take control using WASD, and trigger custom bow combat mechanics and animations.</p>
+				
+				<ul class="links" style="margin-top: 1.5rem;">
+					<li><a href="#" target="_blank" title="More Info">👁️ VIEW PROJECT</a></li>
+				</ul>
+			</section>
+			
+		</main>
+		
+		<footer class="contain">
+			<section class="brutal-footer" style="padding-bottom: var(--step-3);">
+				<a href="index.html" class="btn-brutal" style="display: inline-block;">&larr; GO BACK</a>
+			</section>
+		</footer>
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			console.log("%cIt is a love letter to the earlier iterations of the internet, including the Geocities era, the web art age, and the romantic html era.\n\nThe website is responsive for desktop and mobile.", "font-family: monospace; font-size: 14px; color: #ff00ff;");
+		});
+	</script>
+</body>
+</html>
